@@ -5,11 +5,33 @@ let depositBtn = document.getElementById("deposit-btn");
 let withdrawBtn = document.getElementById("withdraw-btn"); 
 
 
-
 function loginfunc()
 {
-    loginArea.style.display = "none";
-    transArea.style.display = "block"; 
+    let loginMail = document.getElementById("login-mail").value; 
+    let loginPass = document.getElementById("login-pass").value; 
+    const mail = "aysha@gmail.com"; 
+    const pass = "aysha"; 
+
+    if (loginMail == mail && loginPass == pass)
+    {
+        loginArea.style.display = "none";
+        transArea.style.display = "block";
+    }
+
+    else if (loginMail == mail && loginPass!= pass) {
+        alert("Wrong password"); 
+        window.location.reload();
+    }
+    else if (loginMail != mail && loginPass == pass) {
+        alert("Wrong Email");
+        window.location.reload();
+    }
+    else
+    {
+        alert("Re-Enter Values"); 
+        window.location.reload();
+    }
+    
     
     console.log('Btn has been clicked'); 
 }
@@ -31,9 +53,13 @@ function dipositfunc()
 function withdrawfunc()
 {
     let withdrawAmount = getInput("withdraw-amount"); 
-    console.log(withdrawAmount);
+
+    //withdraw
+    updateSpan("exist-withdraw", withdrawAmount);
     document.getElementById("withdraw-amount").value = ""
 
+    //balance 
+     updateSpan("exist-balance", -withdrawAmount);
 }
 
 function getInput(id)
@@ -43,7 +69,6 @@ function getInput(id)
 
 function updateSpan(id, depositVal)
 {
-    
     let preVal = parseFloat(document.getElementById(id).innerText);
     let TotalVal = depositVal + preVal;
     document.getElementById(id).innerText = TotalVal;
