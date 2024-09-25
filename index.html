@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+        <title>JS-Bank</title>
+</head>
+<body>
+    
+    <div id="Login-area">
+        <h1 class="text-center">Welcome Here!!</h1>
+        <div class="login-box">
+            <h4>Login</h4>
+            <input type="email" name="" id="" class="form-control" placeholder="Enter Email">
+            <br>
+            <input type="password" name="" id="" class="form-control" placeholder="Password">
+            <br>
+            <button onclick="loginfunc()" id="submit-btn" class="btn btn-success">Enter</button>
+        </div>
+    </div>
+    <div id="trans-area">
+        <h1>Transaction Area</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="diposit status">
+                    <h5>Deposit</h5>
+                    <h2>$<span id="exist-deposit">00</span></h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status"> 
+                    <h5>Withdraw</h5>
+                    <h2>$<span id="exist-withdraw">00 </span></h2>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$<span id="exist-balance">1240</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h4>Diposit</h4>
+                    <input id="diposit-amount" type="text" placeholder="$ amount you want to Deposit" class="form-control">
+                    <br>
+                    <button id="deposit-btn" class="btn btn-success" onclick="dipositfunc()">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h4>Withdraw</h4>
+                    <input id="withdraw-amount" type="text" placeholder="$ amount you want to Withdraw" class="form-control">
+                    <br>
+                    <button id="withdraw-btn" class="btn btn-success" onclick="withdrawfunc()">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

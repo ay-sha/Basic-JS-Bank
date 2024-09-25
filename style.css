@@ -1,0 +1,37 @@
+body{
+    padding: 100px;
+}
+.login-box
+{
+    margin-top: 50px;
+    border: 1px solid rgb(184, 183, 183);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+
+}
+#trans-area
+{
+    display: none;
+}
+.diposit
+{
+    background-color: slateblue;
+}
+
+.withdraw 
+{
+    background-color: lightsalmon;
+}
+
+.balance 
+{
+    background-color: orange;
+}
+.status
+{
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
