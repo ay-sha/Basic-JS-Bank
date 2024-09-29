@@ -41,11 +41,19 @@ function dipositfunc()
     let depositVal = getInput("diposit-amount");
     
     //Deposit
-    updateSpan("exist-deposit", depositVal)
-    document.getElementById("diposit-amount").value = ""
+    if (depositVal < 0)
+    {
+        alert("Amount should be Positive Value")
+    }
+    else
+        {
+            updateSpan("exist-deposit", depositVal)
+            document.getElementById("diposit-amount").value = ""
 
-    //Balance
-    updateSpan("exist-balance", depositVal);
+            //Balance
+            updateSpan("exist-balance", depositVal);
+        }
+    
 
 }
 
@@ -55,11 +63,19 @@ function withdrawfunc()
     let withdrawAmount = getInput("withdraw-amount"); 
 
     //withdraw
-    updateSpan("exist-withdraw", withdrawAmount);
-    document.getElementById("withdraw-amount").value = ""
+    if (withdrawAmount < 0)
+    {
+        alert("Amount Should be Positive value")
+    }
+    else
+        {
+            updateSpan("exist-withdraw", withdrawAmount);
+            document.getElementById("withdraw-amount").value = ""
 
-    //balance 
-     updateSpan("exist-balance", -withdrawAmount);
+            //balance 
+            updateSpan("exist-balance", -withdrawAmount);
+        }
+    
 }
 
 function getInput(id)
