@@ -8,4 +8,5 @@ This is a simple banking application built using JavaScript. The application inc
 4. Balance Tracking: The current balance is displayed on the dashboard and updates automatically after every transaction
 
 Login-Email: common@gmail.com
+<br>
 Login-Password: common 
