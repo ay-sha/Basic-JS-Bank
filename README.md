@@ -6,3 +6,6 @@ This is a simple banking application built using JavaScript. The application inc
 2. Deposit: Users can deposit funds into their account and update the balance accordingly.
 3. Withdraw: Users can withdraw funds, and the balance will adjust in real time based on the available balance.
 4. Balance Tracking: The current balance is displayed on the dashboard and updates automatically after every transaction
+
+Login-Email: common@gmail.com
+Login-Password: common 
