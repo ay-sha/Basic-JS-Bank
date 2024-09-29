@@ -9,10 +9,10 @@ function loginfunc()
 {
     let loginMail = document.getElementById("login-mail").value; 
     let loginPass = document.getElementById("login-pass").value; 
-    const mail = "aysha@gmail.com"; 
-    const pass = "aysha"; 
+    const mail = "common@gmail.com"; 
+    const pass = "common"; 
 
-    if (loginMail == mail && loginPass == pass)
+    if (loginMail == mail && loginPass == pass || loginMail == 'aysha@gmail.com' && loginPass == 'aysha')
     {
         loginArea.style.display = "none";
         transArea.style.display = "block";
